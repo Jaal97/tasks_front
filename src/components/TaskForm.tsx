@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import { createTaskRequest } from '../api/task';
+import { useTasks } from '../context/useTasks';
 
 
 export const TaskForm = () => {
@@ -11,15 +11,15 @@ export const TaskForm = () => {
   });
 
 
+  const {createTask} = useTasks()
+
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setTask({...task,[e.target.name]: e.target.value});
 
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(task);
-    const res = await createTaskRequest(task);
-    const data = await res.json();
-    console.log(data);
+    createTask(task);
   }
 
 
@@ -58,8 +58,6 @@ export const TaskForm = () => {
           <button className='bg-indigo-500 px-3 block py-2 w-full'>
             Save
           </button>
-
-        
       </form>
     </div>
   )
