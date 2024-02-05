@@ -29,15 +29,17 @@ export const TaskForm = () => {
         <input 
         type="text" 
         name='title'
-        className='border-2 border-gray-700 p-2 rounded-lg bg-zinc-800 block w-full my-2'
+        className='border-2 border-gray-500 p-2 rounded-lg bg-neutral-700 block w-full my-2 hover:bg-neutral-600'
         placeholder='Escribe un titulo'
         onChange={handleChange}
+        value={task.title}
         />
 
         <textarea name="description" id="" rows={3}
-          className='border-2 border-gray-700 p-2 rounded-lg bg-zinc-800 block w-full my-2'
+          className='border-2 border-gray-500 p-2 rounded-lg bg-neutral-700 block w-full my-2 hover:bg-neutral-600'
           placeholder='Escribe una descripción'
           onChange={handleChange}
+          value={task.description}
         >
 
         </textarea>
@@ -55,7 +57,7 @@ export const TaskForm = () => {
           <span>Done</span>
         </label>
 
-          <button className='bg-indigo-500 px-3 block py-2 w-full'>
+          <button className='bg-indigo-800 px-3 block py-2 w-full hover:bg-indigo-700'>
             Save
           </button>
       </form>
