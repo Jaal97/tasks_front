@@ -1,4 +1,3 @@
-import React from "react";
 import { Task } from "../interfaces/task.interface";
 import { useTasks } from "../context/useTasks";
 import { IoCheckmarkDone, IoTrash } from "react-icons/io5";
