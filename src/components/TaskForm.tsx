@@ -22,7 +22,6 @@ export const TaskForm = () => {
     createTask(task);
   }
 
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -51,7 +50,7 @@ export const TaskForm = () => {
             name='done' 
             id=''
             className='h-5 w-5 text-indigo-600'
-            onChange={(e) => setTask({...task, done: !task.done})
+            onChange={() => setTask({...task, done: !task.done})
             }
             />
           <span>Done</span>
