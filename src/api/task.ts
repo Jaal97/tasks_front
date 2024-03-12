@@ -1,6 +1,6 @@
 import { CreateTask, UpdateTask } from "../interfaces/task.interface";
 
-const API = "http://3.19.72.172:3000/api";
+const API = "http://190.121.157.130:3001/api";
 
 export const createTaskRequest = (task: CreateTask) =>
   fetch(`${API}/tasks`, {
