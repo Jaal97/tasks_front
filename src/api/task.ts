@@ -1,6 +1,6 @@
 import { CreateTask, UpdateTask } from "../interfaces/task.interface";
 
-const API = "http://190.121.157.130:3001/api";
+const API = "https://nest-api-mongodb-1.onrender.com/api";
 
 export const createTaskRequest = (task: CreateTask) =>
   fetch(`${API}/tasks`, {
